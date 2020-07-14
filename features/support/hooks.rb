@@ -1,5 +1,5 @@
 Before do |scenario |
-  # Selenium::WebDriver::Chrome.path = browser_executable_location
+  Selenium::WebDriver::Chrome.path = browser_executable_location
   options = Selenium::WebDriver::Chrome::Options.new
   Selenium::WebDriver::Chrome::Service.driver_path = driver_executable_location
   options.add_argument('--no-sandbox')
@@ -7,5 +7,8 @@ Before do |scenario |
   options.headless!
   @browser = Watir::Browser.new(:chrome, {options: options})
   @browser.goto('https://www3.mtb.com/')
+  #todo level set chrome binary and chrome driver
+  #todo move git pull to the cmd steps rather than the run steps
+  #
 
 end
