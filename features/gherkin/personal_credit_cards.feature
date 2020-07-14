@@ -3,7 +3,7 @@ Feature: Personal credit cards
   Scenario: pcc Navigation
     Given the user navigates to the landing page
     When the user clicks personal credit cards
-    Then the user validates the url contains credit-cards
+    Then the user validates the url contains credit-cardssss
 
   @regression
   Scenario: pcc Validation
