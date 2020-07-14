@@ -7,8 +7,5 @@ Before do |scenario |
   options.headless!
   @browser = Watir::Browser.new(:chrome, {options: options})
   @browser.goto('https://www3.mtb.com/')
-  #todo level set chrome binary and chrome driver
-  #todo move git pull to the cmd steps rather than the run steps
-  #
 
 end
