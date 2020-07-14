@@ -82,6 +82,6 @@ class Splitter
     scenarios[(build_number.to_i - 1)]
   end
 end
-#
-# one = Splitter.new
-# one.main_run
+
+one = Splitter.new
+one.main_run
