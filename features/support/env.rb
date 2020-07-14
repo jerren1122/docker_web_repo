@@ -7,6 +7,6 @@ require 'watir'
 require 'rspec'
 require 'page_helper'
 include(PageHelper, PageObject::PageFactory)
-
+require PAGES_DIR + '/base_page'
 Dir["#{PAGES_DIR}**/*.rb"].each { |file| require file }
 
