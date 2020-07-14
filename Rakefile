@@ -6,7 +6,7 @@ require 'rspec/core/rake_task'
 module RakeProfileHelper
   def self.setup_profile(task, name)
     task.profile = name
-    task.cucumber_opts = "#{run_folder} --retry #{rerun} --guess --color --verbose --format json --out '#{output_folder}'/cucumber.json  --format junit --out '#{output_folder}' --format html --out '#{output_folder + html_name}.html' #{or_tags}"
+    task.cucumber_opts = "#{run_folder} --retry #{rerun} --guess --color --verbose --format html --out '#{output_folder + html_name}.html' #{or_tags}"
   end
 
   def self.output_folder
