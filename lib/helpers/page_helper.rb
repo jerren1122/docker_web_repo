@@ -13,4 +13,9 @@ module PageHelper
       @current_page.instance_eval("#{element.gsub(' ', '_').gsub('/', '.').downcase}_element")
   end
 
+  def driver_executable_location
+    ENV['driver_executable_location'].nil? ? false : ENV['driver_executable_location']
+  end
+
+
 end
