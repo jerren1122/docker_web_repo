@@ -18,7 +18,7 @@ services:
     image: cucumber-example
     restart: "no"
     environment:
-      build_number: 2
+      build_number: 3
       total_number_of_builds: 3
 
 #  volumes:
