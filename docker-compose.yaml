@@ -2,20 +2,31 @@ version: '2.0'
 services:
   one:
     image: cucumber-example
+    restart: "no"
     environment:
       build_number: 1
       total_number_of_builds: 3
-      volumes:
-        "- docker_output:/usr/bin/web-repo/output"
 
   two:
     image: cucumber-example
+    restart: "no"
     environment:
       build_number: 2
       total_number_of_builds: 3
 
   three:
     image: cucumber-example
+    restart: "no"
     environment:
       build_number: 2
       total_number_of_builds: 3
+
+#  volumes:
+#    volume:
+#      target: './web_repo/output
+#      source: ./docker_output
+
+
+
+
+

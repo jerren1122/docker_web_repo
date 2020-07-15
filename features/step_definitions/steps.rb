@@ -3,7 +3,7 @@ When(/^the user navigates to the (.+) page$/) do |page_name|
 end
 
 When(/^the user clicks (.*)$/) do |element|
-  to_element(element).click
+  to_element(element).click!
 end
 
 Then(/^the user validates the url contains (.*)$/) do |content|

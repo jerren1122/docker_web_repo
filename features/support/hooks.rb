@@ -1,11 +1,18 @@
-Before do |scenario |
-  Selenium::WebDriver::Chrome.path = browser_executable_location
+Before do |scenario|
+  if browser_executable_location
+    Selenium::WebDriver::Chrome.path = browser_executable_location
+  end
   options = Selenium::WebDriver::Chrome::Options.new
-  Selenium::WebDriver::Chrome::Service.driver_path = driver_executable_location
+  if driver_executable_location
+    Selenium::WebDriver::Chrome::Service.driver_path = driver_executable_location
+  end
   options.add_argument('--no-sandbox')
   options.add_argument('--disable-dev-shm-usage')
   options.headless!
   @browser = Watir::Browser.new(:chrome, {options: options})
-  @browser.goto('https://www3.mtb.com/')
-
+  @browser.goto('http://webdriveruniversity.com/index.html')
+  #todo clean up scripts
+  #todo remove redundancy in docker compose
+  #todo does it automatically complete a git update if the file already exists
+  #todo harvest the output files
 end
