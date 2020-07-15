@@ -1,4 +1,4 @@
-Feature: Login Portal
+Feature: misc feature
 
   @regression
   Scenario: button clicks 1
