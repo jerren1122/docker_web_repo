@@ -7,7 +7,7 @@ module RakeProfileHelper
   def self.setup_profile(task, name)
     task.profile = name
     FileUtils.mkdir_p(output_folder) unless File.exists?(output_folder)
-    task.cucumber_opts = "#{run_folder} --retry #{rerun} --guess --color --verbose --format json --out '#{output_folder}'/cucumber.json --format html --out '#{output_folder + html_name}.html' #{or_tags}"
+    task.cucumber_opts = "#{run_folder} --retry #{rerun} --guess --color --verbose --format json --out '#{output_folder + file_name}.json' --format html --out '#{output_folder + file_name}.html' #{or_tags}"
   end
 
   def self.output_folder
@@ -18,7 +18,7 @@ module RakeProfileHelper
     ENV['rerun'].nil? ? 0 : ENV['rerun']
   end
 
-  def self.html_name
+  def self.file_name
     "AutomationReport"
   end
 
