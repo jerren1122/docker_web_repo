@@ -1,25 +1,75 @@
 version: '2.0'
+
 services:
   one:
     image: cucumber-example
     restart: "no"
     environment:
       build_number: 1
-      total_number_of_builds: 3
+      total_number_of_builds: 10
 
   two:
     image: cucumber-example
     restart: "no"
     environment:
       build_number: 2
-      total_number_of_builds: 3
+      total_number_of_builds: 10
 
   three:
     image: cucumber-example
     restart: "no"
     environment:
       build_number: 3
-      total_number_of_builds: 3
+      total_number_of_builds: 10
+
+  four:
+    image: cucumber-example
+    restart: "no"
+    environment:
+      build_number: 4
+      total_number_of_builds: 10
+
+  five:
+    image: cucumber-example
+    restart: "no"
+    environment:
+      build_number: 5
+      total_number_of_builds: 10
+
+  six:
+    image: cucumber-example
+    restart: "no"
+    environment:
+      build_number: 6
+      total_number_of_builds: 10
+
+  seven:
+    image: cucumber-example
+    restart: "no"
+    environment:
+      build_number: 7
+      total_number_of_builds: 10
+
+  eight:
+    image: cucumber-example
+    restart: "no"
+    environment:
+      build_number: 8
+      total_number_of_builds: 10
+
+  nine:
+    image: cucumber-example
+    restart: "no"
+    environment:
+      build_number: 9
+      total_number_of_builds: 10
+
+  ten:
+    image: cucumber-example
+    restart: "no"
+    environment:
+      build_number: 10
+      total_number_of_builds: 10
 
 #  volumes:
 #    volume:

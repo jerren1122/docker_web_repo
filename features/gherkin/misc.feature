@@ -12,6 +12,12 @@ Feature: misc feature
     Then the user validates the url contains index
 
   @regression
+  Scenario: button clicks 3
+    Given the user navigates to the landing page
+    When the user clicks button_clicks
+    Then the user validates the url contains index
+
+  @regression
   Scenario: to do list 1
     Given the user navigates to the landing page
     And the user validates the element to_do_list displays
