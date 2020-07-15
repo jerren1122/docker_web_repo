@@ -1,3 +1,6 @@
+
+docker-compose rm -f
+
 docker-compose up
 
 docker container cp sample_cucumber_two_1:web_repo/output ./docker_output/2
