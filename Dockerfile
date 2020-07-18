@@ -9,7 +9,7 @@ FROM homebrew/brew
 
 #setup
 RUN apt-get update -y -q
-RUN apt-get install -y -q unzip xvfb curl wget zlib1g-dev ruby bundler git libxi6 libgconf-2-4
+RUN apt-get install -y -q unzip xvfb curl wget zlib1g-dev libxi6 libgconf-2-4
 
 #install rbenv
 RUN export PATH="/home/linuxbrew/.linuxbrew/opt/openssl@1.1/bin:$PATH" >> ~/.bash_profile
