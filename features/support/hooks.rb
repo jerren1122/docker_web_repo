@@ -11,6 +11,7 @@ Before do |scenario|
   options.headless!
   @browser = Watir::Browser.new(:chrome, {options: options})
   @browser.goto('http://webdriveruniversity.com/index.html')
-  #todo remove redundancy in docker compose
-  #todo does it automatically complete a git update if the file already exists
+  # todo run compose utilizing docker stack on a distributed ecosystem
+  # todo play with volumes
+  # todo change repo to public and remove security token for github in dockerfile
 end

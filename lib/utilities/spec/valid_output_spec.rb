@@ -21,5 +21,10 @@ describe 'valid output' do
       @check = ValidOutput.new("Sat 07/18/2020", "9:36:25.32")
       expect{@check.check_times('./spec/data/happy_path_file_repo')}.to raise_error(RuntimeError)
     end
+
+    it 'fails if there are no results in the output' do
+      @check = ValidOutput.new("Sat 07/18/2020", "9:36:25.32")
+      expect{@check.check_times('../lib/helpers')}.to raise_error(RuntimeError)
+    end
   end
 end

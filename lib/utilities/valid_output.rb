@@ -5,6 +5,7 @@ class ValidOutput
   def initialize(starting_date, starting_time)
     @starting_date = starting_date
     @starting_time = starting_time
+
   end
 
   def parse_starting_time
@@ -17,14 +18,18 @@ class ValidOutput
     File.mtime(file_name)
   end
 
-  def check_times(file_repo='../../docker_output')
+  def check_times(file_repo = '../../docker_output')
     start_time = parse_starting_time
-    Dir.glob("./#{file_repo}/**/*.html").each do |file|
+    files = Dir.glob("./#{file_repo}/**/*.html")
+    if files.length == 0
+      raise "not looking the correct path for the files"
+    end
+    files.each do |file|
       if start_time > parse_file_time(file)
         raise "Files are not valid from the copy from Docker portion"
       end
       print "start time is: " + start_time.to_s
-      print "file time is: " + parse_file_time(file)
+      print "file time is: " + parse_file_time(file).to_s
     end
     true
   end

@@ -13,4 +13,6 @@ docker container cp sample_cucumber_six_1:web_repo/output ./docker_output/6
 docker container cp sample_cucumber_seven_1:web_repo/output ./docker_output/7
 docker container cp sample_cucumber_eight_1:web_repo/output ./docker_output/8
 
-ruby './lib/utilities/valid_output.rb' "%starting_date%" "%starting_time%"
+cd ./lib/utilities
+
+ruby 'valid_output.rb' "%starting_date%" "%starting_time%"
