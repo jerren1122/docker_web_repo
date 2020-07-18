@@ -23,6 +23,8 @@ class ValidOutput
       if start_time > parse_file_time(file)
         raise "Files are not valid from the copy from Docker portion"
       end
+      print "start time is: " + start_time.to_s
+      print "file time is: " + parse_file_time(file)
     end
     true
   end
