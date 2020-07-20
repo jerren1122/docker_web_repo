@@ -2,7 +2,7 @@ set starting_time=%time%
 set starting_date=%date%
 
 docker-compose rm -f
-docker-compose up -d
+docker-compose up
 set file_name = repo_name
 
 docker container cp %file_name%_one_1:web_repo/output ./docker_output/1
