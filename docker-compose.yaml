@@ -1,6 +1,12 @@
 version: '3.3'
 
 
+x-labels: &deploy
+  deploy:
+    resources:
+      limits:
+        cpus: '.50'
+        memory: '50M'
 
 services:
   one:
@@ -9,11 +15,8 @@ services:
     environment:
       build_number: 1
       total_number_of_builds: 8
-    deploy: &deploy
-      resources:
-        limits:
-          cpus: '.50'
-          memory: '50M'
+    <<: *deploy
+
 
   two:
     image: cucumber-example
