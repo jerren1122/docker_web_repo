@@ -21,7 +21,7 @@ services:
     environment:
       build_number: 2
       total_number_of_builds: 8
-     <<: *deploy
+    <<: *deploy
 
 
   three:
