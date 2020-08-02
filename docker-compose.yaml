@@ -57,15 +57,30 @@ services:
       build_number: 8
       total_number_of_builds: 8
 
+  nine:
+    image: cucumber-example
+    restart: "no"
+    environment:
+      build_number: 8
+      total_number_of_builds: 8
 
+  ten:
+    image: cucumber-example
+    restart: "no"
+    environment:
+      build_number: 8
+      total_number_of_builds: 8
 
+  eleven:
+    image: cucumber-example
+    restart: "no"
+    environment:
+      build_number: 8
+      total_number_of_builds: 8
 
-#  volumes:
-#    volume:
-#      target: './web_repo/output
-#      source: ./docker_output
-
-
-
-
-
+  twelve:
+    image: cucumber-example
+    restart: "no"
+    environment:
+      build_number: 8
+      total_number_of_builds: 8
