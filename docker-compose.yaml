@@ -6,7 +6,7 @@ x-labels: &deploy
     resources:
       limits:
         cpus: '.50'
-        memory: '50M'
+        memory: '250M'
 
 services:
   one:
@@ -34,7 +34,7 @@ services:
       build_number: 3
       total_number_of_builds: 8
     <<: *deploy
-
+docker
   four:
     image: cucumber-example
     restart: "no"
