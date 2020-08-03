@@ -1,5 +1,3 @@
-#inherit git
-FROM alpine/git
 
 #inherit homebrew
 FROM homebrew/brew
