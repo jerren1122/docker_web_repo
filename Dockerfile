@@ -20,11 +20,11 @@ RUN unzip -d /usr/bin /usr/bin/chromedriver* chromedriver
 FROM alpine/git as git-stage
 WORKDIR /
 RUN git clone https://jerren1122:bd2dc7145c61e68bbd438af06219d09f852ae9eb@github.com/jerren1122/web_repo.git
-RUN ls -a
 
 #inherit ruby
 FROM ruby:2.7.1
 COPY --from=setup-stage /usr/bin/google-chrome-stable /usr/bin/google-chrome-stable
+COPY --from=setup-stage /usr/bin/google-chrome /usr/bin/google-chrome
 COPY --from=setup-stage /usr/bin/chromedriver /usr/bin/chromedriver
 COPY --from=git-stage /web_repo /web_repo
 
