@@ -1,9 +1,6 @@
 #inherit git
 FROM alpine/git
 
-#inherit ubuntu
-FROM ubuntu:xenial
-
 #inherit homebrew
 FROM homebrew/brew
 
