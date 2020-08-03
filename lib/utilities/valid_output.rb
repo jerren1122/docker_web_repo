@@ -22,7 +22,7 @@ class ValidOutput
     start_time = parse_starting_time
     files = Dir.glob("./#{file_repo}/**/*.html")
     if files.length == 0
-      raise "not looking the correct path for the files"
+      raise "not looking at the correct path for the files"
     end
     files.each do |file|
       if start_time > parse_file_time(file)

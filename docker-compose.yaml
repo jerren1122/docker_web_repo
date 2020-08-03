@@ -1,59 +1,58 @@
 version: '3.7'
 
+x-labels: &standard_build
+  image: cucumber-example
+  restart: "no"
+
+x-labels: &number_of_builds
+  total_number_of_builds: 8
+
 services:
   one:
-    image: cucumber-example
-    restart: "no"
+    <<: *standard_build
     environment:
       build_number: 1
-      total_number_of_builds: 8
+      <<: *number_of_builds
+
 
   two:
-    image: cucumber-example
-    restart: "no"
+    <<: *standard_build
     environment:
       build_number: 2
-      total_number_of_builds: 8
+      <<: *number_of_builds
 
   three:
-    image: cucumber-example
-    restart: "no"
+    <<: *standard_build
     environment:
       build_number: 3
-      total_number_of_builds: 8
+      <<: *number_of_builds
 
   four:
-    image: cucumber-example
-    restart: "no"
+    <<: *standard_build
     environment:
       build_number: 4
-      total_number_of_builds: 8
+      <<: *number_of_builds
 
   five:
-    image: cucumber-example
-    restart: "no"
+    <<: *standard_build
     environment:
       build_number: 5
-      total_number_of_builds: 8
+      <<: *number_of_builds
 
   six:
-    image: cucumber-example
-    restart: "no"
+    <<: *standard_build
     environment:
       build_number: 6
-      total_number_of_builds: 8
+      <<: *number_of_builds
 
   seven:
-    image: cucumber-example
-    restart: "no"
+    <<: *standard_build
     environment:
       build_number: 7
-      total_number_of_builds: 8
+      <<: *number_of_builds
 
   eight:
-    image: cucumber-example
-    restart: "no"
+    <<: *standard_build
     environment:
       build_number: 8
-      total_number_of_builds: 8
-
+      <<: *number_of_builds
