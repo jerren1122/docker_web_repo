@@ -1,6 +1,8 @@
 set starting_time=%time%
 set starting_date=%date%
 
+docker image build --no-cache -t cucumber-example ./
+
 docker-compose rm -f
 docker-compose up
 
