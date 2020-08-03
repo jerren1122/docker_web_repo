@@ -9,6 +9,7 @@ Before do |scenario|
   options.add_argument('--no-sandbox')
   options.add_argument('--disable-dev-shm-usage')
   options.headless!
+  print(Selenium::WebDriver::Chrome::Service.driver_path)
   @browser = Watir::Browser.new(:chrome, {options: options})
   @browser.goto('http://webdriveruniversity.com/index.html')
   # todo run compose utilizing docker stack on a distributed ecosystem
