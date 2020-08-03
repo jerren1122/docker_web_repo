@@ -1,13 +1,5 @@
 version: '3.7'
 
-
-x-labels: &deploy
-  deploy:
-    resources:
-      limits:
-        cpus: '.50'
-        memory: '250M'
-
 services:
   one:
     image: cucumber-example
@@ -15,8 +7,6 @@ services:
     environment:
       build_number: 1
       total_number_of_builds: 8
-    <<: *deploy
-
 
   two:
     image: cucumber-example
@@ -24,8 +14,6 @@ services:
     environment:
       build_number: 2
       total_number_of_builds: 8
-    <<: *deploy
-
 
   three:
     image: cucumber-example
@@ -33,15 +21,13 @@ services:
     environment:
       build_number: 3
       total_number_of_builds: 8
-    <<: *deploy
-docker
+
   four:
     image: cucumber-example
     restart: "no"
     environment:
       build_number: 4
       total_number_of_builds: 8
-    <<: *deploy
 
   five:
     image: cucumber-example
@@ -49,7 +35,6 @@ docker
     environment:
       build_number: 5
       total_number_of_builds: 8
-    <<: *deploy
 
   six:
     image: cucumber-example
@@ -57,7 +42,6 @@ docker
     environment:
       build_number: 6
       total_number_of_builds: 8
-    <<: *deploy
 
   seven:
     image: cucumber-example
@@ -65,7 +49,6 @@ docker
     environment:
       build_number: 7
       total_number_of_builds: 8
-    <<: *deploy
 
   eight:
     image: cucumber-example
@@ -73,5 +56,4 @@ docker
     environment:
       build_number: 8
       total_number_of_builds: 8
-    <<: *deploy
 
