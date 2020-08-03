@@ -33,6 +33,7 @@ services:
     environment:
       build_number: 3
       total_number_of_builds: 8
+    <<: *deploy
 
   four:
     image: cucumber-example
@@ -40,6 +41,7 @@ services:
     environment:
       build_number: 4
       total_number_of_builds: 8
+    <<: *deploy
 
   five:
     image: cucumber-example
@@ -47,6 +49,7 @@ services:
     environment:
       build_number: 5
       total_number_of_builds: 8
+    <<: *deploy
 
   six:
     image: cucumber-example
@@ -54,6 +57,7 @@ services:
     environment:
       build_number: 6
       total_number_of_builds: 8
+    <<: *deploy
 
   seven:
     image: cucumber-example
@@ -61,6 +65,7 @@ services:
     environment:
       build_number: 7
       total_number_of_builds: 8
+    <<: *deploy
 
   eight:
     image: cucumber-example
@@ -68,4 +73,5 @@ services:
     environment:
       build_number: 8
       total_number_of_builds: 8
+    <<: *deploy
 
