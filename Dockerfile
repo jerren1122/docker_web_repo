@@ -39,5 +39,5 @@ RUN alias git="docker run -ti --rm -v $(pwd):/git -v $HOME/.ssh:/root/.ssh alpin
 #set local directory bundle install
 WORKDIR /
 
-CMD git clone https://jerren1122:bd2dc7145c61e68bbd438af06219d09f852ae9eb@github.com/jerren1122/web_repo.git; cd web_repo; ls; eval "$(rbenv init -)"; rbenv shell 2.6.6; ruby - v; gem install bundler; bundle install; eval "$(rbenv init -)"; rbenv shell 2.6.6; ruby './lib/utilities/dynamic_tags.rb' $total_number_of_builds $build_number; export browser_executable_location=/usr/bin/google-chrome-stable ; export driver_executable_location=/usr/bin/chromedriver; export or_tags=split_builds ;rake features:default
+CMD git clone https://github.com/jerren1122/web_repo.git; cd web_repo; ls; eval "$(rbenv init -)"; rbenv shell 2.6.6; ruby - v; gem install bundler; bundle install; eval "$(rbenv init -)"; rbenv shell 2.6.6; ruby './lib/utilities/dynamic_tags.rb' $total_number_of_builds $build_number; export browser_executable_location=/usr/bin/google-chrome-stable ; export driver_executable_location=/usr/bin/chromedriver; export or_tags=split_builds ;rake features:default
 
