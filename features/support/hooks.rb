@@ -12,7 +12,4 @@ Before do |scenario|
   print(Selenium::WebDriver::Chrome::Service.driver_path)
   @browser = Watir::Browser.new(:chrome, {options: options})
   @browser.goto('http://webdriveruniversity.com/index.html')
-  # todo run compose utilizing docker stack on a distributed ecosystem
-  # todo play with volumes
-  # todo change repo to public and remove security token for github in dockerfile
 end
