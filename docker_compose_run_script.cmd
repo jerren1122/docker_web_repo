@@ -12,6 +12,10 @@ docker container cp sample_cucumber_five_1:docker_web_repo/output ./docker_outpu
 docker container cp sample_cucumber_six_1:docker_web_repo/output ./docker_output/6
 docker container cp sample_cucumber_seven_1:docker_web_repo/output ./docker_output/7
 docker container cp sample_cucumber_eight_1:docker_web_repo/output ./docker_output/8
+docker container cp sample_cucumber_nine_1:docker_web_repo/output ./docker_output/9
+docker container cp sample_cucumber_ten_1:docker_web_repo/output ./docker_output/10
+docker container cp sample_cucumber_eleven_1:docker_web_repo/output ./docker_output/11
+docker container cp sample_cucumber_twelve_1:docker_web_repo/output ./docker_output/12
 
 docker container logs sample_cucumber_one_1 > ./docker_output/1/logs.txt
 docker container logs sample_cucumber_two_1 > ./docker_output/2/logs.txt
@@ -21,7 +25,10 @@ docker container logs sample_cucumber_five_1 > ./docker_output/5/logs.txt
 docker container logs sample_cucumber_six_1 > ./docker_output/6/logs.txt
 docker container logs sample_cucumber_seven_1 > ./docker_output/7/logs.txt
 docker container logs sample_cucumber_eight_1 > ./docker_output/8/logs.txt
-
+docker container logs sample_cucumber_nine_1 > ./docker_output/9/logs.txt
+docker container logs sample_cucumber_ten_1 > ./docker_output/10/logs.txt
+docker container logs sample_cucumber_eleven_1 > ./docker_output/11/logs.txt
+docker container logs sample_cucumber_twelve_1 > ./docker_output/12/logs.txt
 
 cd ./lib/utilities
 
