@@ -5,7 +5,7 @@ x-labels: &standard_build
   restart: "no"
 
 x-labels: &number_of_builds
-  total_number_of_builds: 8
+  total_number_of_builds: 12
 
 services:
   one:
@@ -78,5 +78,5 @@ services:
   twelve:
     <<: *standard_build
     environment:
-      build_number: 11
+      build_number: 12
       <<: *number_of_builds
