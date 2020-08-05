@@ -56,3 +56,27 @@ services:
     environment:
       build_number: 8
       <<: *number_of_builds
+
+  nine:
+    <<: *standard_build
+    environment:
+      build_number: 9
+      <<: *number_of_builds
+
+  ten:
+    <<: *standard_build
+    environment:
+      build_number: 10
+      <<: *number_of_builds
+
+  eleven:
+    <<: *standard_build
+    environment:
+      build_number: 11
+      <<: *number_of_builds
+
+  twelve:
+    <<: *standard_build
+    environment:
+      build_number: 11
+      <<: *number_of_builds
