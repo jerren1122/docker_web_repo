@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 group :default do
-  gem 'cucumber'
+  gem 'cucumber', '3.1.2'
   gem 'watir'
   gem 'page-object'
   gem 'rspec'
