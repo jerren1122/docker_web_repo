@@ -31,7 +31,7 @@ RUN ls -a
 RUN unzip -d /usr/bin /usr/bin/chromedriver* chromedriver
 RUN ls -a
 
-#clone git repo
+#setup git
 
 WORKDIR /
 RUN alias git="docker run -ti --rm -v $(pwd):/git -v $HOME/.ssh:/root/.ssh alpine/git"
