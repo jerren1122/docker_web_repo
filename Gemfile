@@ -6,5 +6,6 @@ group :default do
   gem 'page-object'
   gem 'rspec'
   gem 'rake'
+  gem 'collateral_cucumber', '0.1.2'
 
 end
