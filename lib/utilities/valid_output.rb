@@ -34,6 +34,6 @@ class ValidOutput
     true
   end
 end
-
-one = ValidOutput.new(ARGV[0], ARGV[1])
-one.check_times
+#
+# one = ValidOutput.new(ARGV[0], ARGV[1])
+# one.check_times

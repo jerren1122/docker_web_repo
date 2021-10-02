@@ -1,4 +1,4 @@
-require '../utilities/valid_output'
+require './valid_output'
 describe 'valid output' do
 
   it 'can parse input date/time from variables received from the command line' do
